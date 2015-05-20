@@ -1,12 +1,58 @@
-extends layout
-
+extend layout
 block content
+  meta(charset='utf-8')
+  link(rel='stylesheet', href='style_home_page.css')
+  title MiniTwr_HP
+  body
+  #bloc_page
+    header
+      #titre_principal
+      img#logo(src='https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ5jTSinwBbzqLwDe1IqTH-aKiPePXSnVjd7gl60OGM8XqN19Bo1w', alt='Logo de page')
+      h1 MiniTwttr
+  nav
+    ul
+      li
+        a(href='#') Home
+      li
+        a(href='#') Profile
+
   h1 MiniTwr
-  p Welcome to Minitwr
+  p  Welcome to Minitwr
   form(action='/', method='POST')
     textarea(name="tweet", rows=3, columns=50)
     input(type='submit', content='Sends')
-
-  ul
-    - each tweet in tweets
-      li= tweet
+    ul
+        - each tweet in tweets
+          li= tweet
+    h1 Useful web pages            
+      p
+              These are some useful pages where you can spend your free time 
+        br
+      h3 Entertainement                   
+      ul
+        li
+          a(href='https://www.youtube.com/user/PewDiePie') Pewdiepie               
+        li
+          a(href='http://animeshow.tv/') Anime            
+        li
+          a(href='http://www.miniclip.com/games/en/') Games
+      h3 Studying                
+      ul
+        li
+          a(href='http://openclassrooms.com/courses') Openclasrrom            
+        li
+          a(href='https://www.edx.org/') EDX            
+        li
+          a(href='http://exo7.emath.fr/') MATH
+    footer
+      #first_block
+        p Failure is not falling down but refusing to get up       
+      #Useful_links
+      h1 Support
+        ul
+          li
+            a(href='<a href=') Contact me         
+          li
+            a(href='https://www.google.fr/?gfe_rd=cr&ei=W7RVVbjiNoeZ1AXc2oCgCw') Google search      
+          li
+            a(href='') Settings
