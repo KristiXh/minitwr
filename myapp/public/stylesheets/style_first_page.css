@@ -1,0 +1,89 @@
+#bloc_page
+{
+width:900px;
+margin: auto;
+background-color:cyan;
+}
+
+#liste1
+{
+color: red;
+
+}
+
+aside
+{
+position:relative;
+float:right;
+width:30%;
+bottom: 250px;
+}
+
+footer
+{
+position:relative;
+bottom:200px;
+clear: both;
+margin-bottom:0;
+font-size: medium;
+}
+
+section
+{
+display:inline-block;
+margin: 0 1.5%;
+width:30%;
+}
+
+
+section,aside
+{
+margin 0 1.5% 24px 1.5%
+
+}
+
+
+#logging_in
+{
+margin: auto;
+}
+
+
+.header1
+{
+text-align:justify;
+color:red;
+font-size : xx-large;
+width: 50;
+height: 50px;
+left: 200px;
+position:relative;
+}
+
+body
+{
+
+}
+
+#logo, header h1
+{
+display: inline-block;
+margin-bottom: 0px;
+
+}
+
+.header2
+{
+color : black ;
+font-style: itallic;
+text-decoration:underline; 
+}
+
+.paragraph1
+{
+color : grey;
+font-size : large;
+}
+
+
+

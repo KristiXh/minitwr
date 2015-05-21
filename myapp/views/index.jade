@@ -1,50 +1,51 @@
-extend layout
-block content
-  meta(charset='utf-8')
-  link(rel='stylesheet', href='style_home_page.css')
-  title MiniTwr_HP
-  body
-  #bloc_page
-    header
-      #titre_principal
+doctype html
+html
+head
+    meta(charset='utf-8')
+    link(rel='stylesheet', href='style_first_page.css')
+    title MiniTwr
+    body
+    #bloc_page
       img#logo(src='https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ5jTSinwBbzqLwDe1IqTH-aKiPePXSnVjd7gl60OGM8XqN19Bo1w', alt='Logo de page')
-      h1 MiniTwttr
-  nav
-    ul
-      li
-        a(href='#') Home
-      li
-        a(href='#') Profile
+      header
+        h1.header1 Welcome to MiniTwr
+        h2.header2 The best twttr there is!!
+        p.paragraph1
+        section
+         Here you can
+        #liste1
+          ul
+            li Find friends
+                  
+            li Share your thoughts
+                  
+            li Get the latest news from celebs
 
-  h1 MiniTwr
-  p  Welcome to Minitwr
-  form(action='/', method='POST')
-    textarea(name="tweet", rows=3, columns=50)
-    input(type='submit', content='Sends')
-    ul
-        - each tweet in tweets
-          li= tweet
-    h1 Useful web pages            
-      p
-              These are some useful pages where you can spend your free time 
-        br
-      h3 Entertainement                   
-      ul
-        li
-          a(href='https://www.youtube.com/user/PewDiePie') Pewdiepie               
-        li
-          a(href='http://animeshow.tv/') Anime            
-        li
-          a(href='http://www.miniclip.com/games/en/') Games
-      h3 Studying                
-      ul
-        li
-          a(href='http://openclassrooms.com/courses') Openclasrrom            
-        li
-          a(href='https://www.edx.org/') EDX            
-        li
-          a(href='http://exo7.emath.fr/') MATH
-    footer
+aside
+    #loging_in
+        h2 Come and join a growing community with people just like you !
+         
+      form(name='login')
+      Username
+      input(type='text', name='userid')            
+      Password
+      input(type='password', name='pswrd')            
+      input(type='button', onclick='check(this.form)', value='Login' action="index1.jade")            
+      input(type='reset', value='Cancel')
+
+script(language='javascript').
+    function check(form) { /*function to check userid & password*/
+      /*the following code checkes whether the entered userid and password are matching*/
+      if(form.userid.value == "kristi" && form.pswrd.value == "kristi") {
+      window.open('/index1.jade')/*opens the target page while Id & password matches*/
+      }
+      else {
+      alert("Error Password or Username")/*displays error message*/
+      }
+      }
+
+    p
+footer
       #first_block
         p Failure is not falling down but refusing to get up       
       #Useful_links
@@ -55,4 +56,5 @@ block content
           li
             a(href='https://www.google.fr/?gfe_rd=cr&ei=W7RVVbjiNoeZ1AXc2oCgCw') Google search      
           li
-            a(href='') Settings
+            a(href='') Settings  
+
